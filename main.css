@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.notes-container .notes-header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.notes-container .notes-header h4 {
+  text-transform: capitalize;
+  color: #5c9e46;
+}
+
+.notes-container .notes-header i {
+  color: #5c9e46;
+  cursor: pointer;
+}
+
+.notes-container .notes {
+  overflow-y: auto;
+  height: 400px;
+  padding: 1rem;
+  margin: 0 0 0 auto;
+}
+
+.notes-container .notes::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+.notes-container .notes::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.notes-container .notes::-webkit-scrollbar-thumb {
+  background-color: rgba(53, 53, 53, 0.2);
+  border-radius: 20px;
+}
+
+.notes-container .notes .note {
+  background-color: #5c9e46;
+  color: #fff;
+  padding: 1rem 1rem 0.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.notes-container .notes .note .note-content {
+  margin: 0;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.notes-container .notes .note:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.notes-container .notes .note .sender {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.notes-container .notes .note .sender .name {
+  font-weight: 600;
+  margin: 1rem 0.5rem 1rem 0;
+}
